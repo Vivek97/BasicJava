@@ -34,6 +34,29 @@ in1020(8, 99) → false
         boolean result = (a >=10 && a <= 20) ? true :(b >=10 && b <= 20);
         return result;
     }
+/*
+We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
+hasTeen(13, 20, 10) → true
+hasTeen(20, 19, 10) → true
+hasTeen(20, 10, 13) → true
+*/
+
+    public boolean hasTeen(int a, int b, int c) {
+        boolean result = (((a >12) && (a<20)) || ((b>12)&&(b<20)) ||((c>12)&&(c<20))) ? true : false;
+        return result;
+    }
+/*
+We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+loneTeen(13, 99) → true
+loneTeen(21, 19) → true
+loneTeen(13, 13) → false
+*/
+    public boolean loneTeen(int a, int b) {
+        boolean result = (a>12 && a<20 )? (b<11 || b>19) :(b>12 && b<20 );
+        return result;
+    }
+
+
 
     public static void main (String args [])
     {
